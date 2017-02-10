@@ -1,0 +1,19 @@
+<article>
+  <header>
+    <h3><%= @post.title %></h3>
+    <h4><%= @post.author %></h4>
+    <%= link "Back to Posts", to: post_path(@conn, :index) %>
+  </header>
+
+  <p><%= @post.body %></p>
+  <p><%= link "Edit", to: post_path(@conn, :edit, @post.id) %></p>
+
+  <section>
+    <h3>Comments</h3>
+    <%= link "New Comment", to: post_comment_path(@conn, :new, @post.id) %>
+    <%= for comment <- @post.comments do %>
+      <p><%= comment.author %></p>
+      <p><%= comment.body %></p>
+    <% end %>
+  </section>
+</article>

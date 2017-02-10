@@ -16,11 +16,8 @@ defmodule Blog.Web.Router do
   scope "/", Blog.Web do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    resources "/", PostController do
+      resources "/comments", CommentController, only: [:new, :create]
+    end
   end
-
-  # Other scopes may use custom stacks.
-  # scope "/api", Blog.Web do
-  #   pipe_through :api
-  # end
 end

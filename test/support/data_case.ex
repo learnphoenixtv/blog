@@ -17,6 +17,7 @@ defmodule Blog.DataCase do
   using do
     quote do
       alias Blog.Repo
+      alias Blog.Factory
 
       import Ecto
       import Ecto.Changeset

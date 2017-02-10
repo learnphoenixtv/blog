@@ -1,0 +1,11 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= label f, :author %>
+  <%= text_input f, :author %>
+  <%= error_tag f, :author %>
+
+  <%= label f, :body %>
+  <%= textarea f, :body %>
+  <%= error_tag f, :body %>
+
+  <%= submit "Save Comment" %>
+<% end %>

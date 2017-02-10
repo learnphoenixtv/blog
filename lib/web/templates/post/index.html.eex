@@ -1,0 +1,14 @@
+<h1>Posts</h1>
+<%= link "New Post", to: post_path(@conn, :new) %>
+
+<%= for post <- @posts do %>
+  <article>
+    <header>
+      <h3><%= link post.title, to: post_path(@conn, :show, post.id) %></h3>
+      <h4><%= post.author %></h4>
+    </header>
+
+    <p><%= post.body %></p>
+    <p><%= link "Edit", to: post_path(@conn, :edit, post.id) %></p>
+  </article>
+<% end %>

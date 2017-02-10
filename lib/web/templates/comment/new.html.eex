@@ -1,0 +1,2 @@
+<h1>New Comment</h1>
+<%= render "_form.html", Map.merge(assigns, %{action: post_comment_path(@conn, :create, @conn.params["post_id"])}) %>

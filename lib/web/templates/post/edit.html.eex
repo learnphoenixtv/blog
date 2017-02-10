@@ -1,0 +1,2 @@
+<h1>Edit Post</h1>
+<%= render "_form.html", Map.merge(assigns, %{action: post_path(@conn, :update, @changeset.data.id)}) %>

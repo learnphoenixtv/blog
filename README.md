@@ -1,5 +1,12 @@
 # Blog
 
+An example Phoenix 1.3 application. Demonstrates how to structure a simple blog
+in the way Phoenix 1.3 will recommend.
+
+For the umbrella version, see <https://github.com/learnphoenixtv/blog_umbrella>.
+
+## Running the Server
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

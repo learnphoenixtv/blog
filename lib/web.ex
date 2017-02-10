@@ -31,6 +31,7 @@ defmodule Blog.Web do
       use Phoenix.Controller, namespace: Blog.Web
       import Blog.Web.Router.Helpers
       import Blog.Web.Gettext
+      import Blog.Web.Controller
     end
   end
 
